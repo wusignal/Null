@@ -1,0 +1,49 @@
+name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve SPM dependencies
+        run: xcodebuild -resolvePackageDependencies -project Authenticator.xcodeproj -scheme Authenticator
+
+      - name: Build app (unsigned)
+        run: |
+          xcodebuild \
+            -project Authenticator.xcodeproj \
+            -scheme Authenticator \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package IPA
+        run: |
+          APP_PATH="build/Build/Products/Release-iphoneos/Authenticator.app"
+          if [ ! -d "$APP_PATH" ]; then
+            echo "App product not found: $APP_PATH"
+            exit 1
+          fi
+          echo "App size: $(du -sh "$APP_PATH" | cut -f1)"
+          find "$APP_PATH/PlugIns" -maxdepth 2 -type d || true
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -r -q YubioAuthenticator-zh-unsigned.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: YubioAuthenticator-zh-unsigned
+          path: YubioAuthenticator-zh-unsigned.ipa
+          if-no-files-found: error

@@ -1,0 +1,142 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "Launch Yubico Authenticator": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yubico Authenticator starten"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lancer Yubico Authenticator"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yubico Authenticatorを起動"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spustiť Yubico Authenticator"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启动 Yubico Authenticator"
+          }
+        }
+      }
+    },
+    "Tap here to complete the decryption request using your YubiKey.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tap here to complete the decryption request using your YubiKey."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tap here to complete the decryption request using your YubiKey."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tap here to complete the decryption request using your YubiKey."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ťuknite sem a dokončite žiadosť o dešifrovanie pomocou svojho YubiKey."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点按此处使用你的 YubiKey 完成解密请求."
+          }
+        }
+      }
+    },
+    "Tap here to complete the request using your YubiKey.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tippe hier, um die Anfrage mit Deinem YubiKey abzuschließen."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appuyez ici pour finaliser la demande avec votre YubiKey."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ここをタップし、YubiKeyを使用してリクエストを完了します。"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ťuknite sem a dokončite žiadosť pomocou svojho YubiKey."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点按此处使用你的 YubiKey 完成请求."
+          }
+        }
+      }
+    },
+    "YubiKey required": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "YubiKey erforderlich"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "YubiKey requise"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "YubiKeyが必要です"
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vyžaduje sa YubiKey"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要 YubiKey"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
